@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  name     String
+  password String
+}
+
+model Cards {
+  id              String    @id @default(uuid())
+  img             String
+  productName     String
+  productLanguage String
+  condition       String
+  releaseDate     DateTime @db.Timestamp(6)
+  description     String
+}
+
+model Display {
+  id              String   @id @default(uuid())
+  img             String
+  productName     String
+  productLanguage String
+  condition       String
+  releaseDate     DateTime @db.Timestamp(6)
+  description     String
+}
+
+model Packs {
+  id              String   @id @default(uuid())
+  img             String
+  productName     String
+  productLanguage String
+  condition       String
+  releaseDate     DateTime @db.Timestamp(6)
+  description     String
+}
+
+model Tin {
+  id              String   @id @default(uuid())
+  img             String
+  productName     String
+  productLanguage String
+  condition       String
+  releaseDate     DateTime @db.Timestamp(6)
+  description     String
+}
+
+model Etb {
+  id              String   @id @default(uuid())
+  img             String
+  productName     String
+  productLanguage String
+  condition       String
+  releaseDate     DateTime @db.Timestamp(6)
+  description     String
+}
+
+model Collections {
+  id              String   @id @default(uuid())
+  img             String
+  productName     String
+  productLanguage String
+  condition       String
+  releaseDate     DateTime @db.Timestamp(6)
+  description     String
+}
