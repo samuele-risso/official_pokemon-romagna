@@ -1,5 +1,8 @@
 // @ts-ignore
 import express from "express";
+// @ts-ignore
+import cors from 'cors';
+import "dotenv/config";
 import { CardsController } from "./api-controllers/cards.controller";
 import { DisplayController } from "./api-controllers/display.controller";
 import { PacksController } from "./api-controllers/packs.controller";
@@ -8,7 +11,11 @@ import { EtbController } from "./api-controllers/etb.controller";
 import { CollectionsController } from "./api-controllers/collections.controller";
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.SERVER_PORT;
+
+app.use(cors({
+  origin: process.env.CLIENT_BASE_URL
+}));
 
 const cards = new CardsController();
 const display = new DisplayController();
@@ -16,6 +23,8 @@ const packs = new PacksController();
 const tin = new TinController();
 const etb = new EtbController();
 const collections = new CollectionsController();
+
+app.use(express.json()); 
 
 // --- Cards Routes ---
 app.get('/api/cards', cards.GetAll);
