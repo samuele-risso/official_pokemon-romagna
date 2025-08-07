@@ -1,7 +1,7 @@
 // @ts-ignore
 import { Request, Response } from 'express';
 import { TinCommands } from '../api-commands/tin.commands.js';
-import { IAddCommand, IUpdateCommand, IDeleteCommand } from '../api-interfaces/commands.interfaces.js';
+import { IAddCommand, IUpdateCommand, IDeleteCommand } from '../api-interfaces/shared-commands.interfaces.js';
 import { BaseControllers } from '../api-base/base.controllers.js';
 
 export class TinController extends BaseControllers {

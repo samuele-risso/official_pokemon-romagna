@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { BaseQueries } from "../api-base/base.queries.js";
-import { IDetailQuery, IDetailDTO, IListDTO } from "../api-interfaces/queries.interfaces.js";
+import { IDetailQuery, IDetailDTO, IListDTO } from "../api-interfaces/shared-queries.interfaces.js";
 
 const prisma = new PrismaClient();
 

@@ -1,4 +1,4 @@
-import { IAddCommand, IUpdateCommand, IDeleteCommand } from '../api-interfaces/commands.interfaces.js';
+import { IAddCommand, IUpdateCommand, IDeleteCommand } from '../api-interfaces/shared-commands.interfaces.js';
 
 export abstract class BaseCommands {
   public abstract AddCommand(cmd: IAddCommand): Promise<void>;

@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { BaseCommands } from '../api-base/base.commands.js';
-import { IAddCommand, IUpdateCommand, IDeleteCommand } from '../api-interfaces/commands.interfaces.js';
+import { IAddCommand, IUpdateCommand, IDeleteCommand } from '../api-interfaces/shared-commands.interfaces.js';
 
 const prisma = new PrismaClient();
 

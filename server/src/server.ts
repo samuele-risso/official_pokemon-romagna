@@ -13,9 +13,9 @@ import { CollectionsController } from "./api-controllers/collections.controller"
 const app = express();
 const PORT = process.env.SERVER_PORT;
 
-app.use(cors({
-  origin: process.env.CLIENT_BASE_URL
-}));
+// app.use(cors({
+//   origin: process.env.CLIENT_BASE_URL
+// }));
 
 const cards = new CardsController();
 const display = new DisplayController();

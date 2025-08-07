@@ -2,9 +2,9 @@
 import { Response, Request } from 'express';
 import { BaseControllers } from '../api-base/base.controllers.js';
 import { CardsCommands } from "../api-commands/cards.commands.js";
-import { IAddCommand, IUpdateCommand, IDeleteCommand } from "../api-interfaces/commands.interfaces.js"
+import { IAddCommand, IUpdateCommand, IDeleteCommand } from "../api-interfaces/shared-commands.interfaces.js"
 import { CardsQueries } from '../api-queries/cards.queries.js';
-import { IDetailResponse, IListResponse } from '../api-interfaces/responses.interfaces.js';
+import { IDetailResponse, IListResponse } from '../api-interfaces/shared-responses.interfaces.js';
 
 
 export class CardsController extends BaseControllers {
